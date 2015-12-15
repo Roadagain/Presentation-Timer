@@ -30,6 +30,7 @@ function resetTimer(){
 
 window.onload = function(){
     document.getElementById('start').addEventListener('click', function(){
+        resetTimer();
         count(0, 60);
     });
     document.getElementById('reset').addEventListener('click', function(){
