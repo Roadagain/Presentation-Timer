@@ -14,6 +14,9 @@ function count(current, maximum){
     timer.innerText = formatTime(current);
 
     window.setTimeout(count, 1000, current + 1, maximum);
+    if (current === maximum){
+        timer.style.color = 'red';
+    }
 }
 
 window.onload = function(){
