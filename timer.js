@@ -13,7 +13,10 @@ function count(current, maximum){
     var timer = document.getElementById('timer');
     timer.innerText = formatTime(current);
 
-    window.setTimeout(count, 1000, current + 1, maximum);
+    var timeoutId = window.setTimeout(count, 1000, current + 1, maximum);
+    document.getElementById('stop').addEventListener('click', function(){
+        window.clearTimeout(timeoutId);
+    });
     if (current === maximum){
         timer.style.color = 'red';
     }
