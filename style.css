@@ -7,4 +7,6 @@ body {
 
 p#timer {
     font-size: 600px;
+    margin: 0;
+    padding: 0;
 }
