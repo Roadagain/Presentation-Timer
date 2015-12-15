@@ -4,7 +4,7 @@ function count(current, maximum){
     }
 
     var timer = document.getElementById('timer');
-    timer.innerText = current / 60 + ':' + current % 60;
+    timer.innerText = Math.floor(current / 60) + ':' + current % 60;
 
     window.setTimeout(count, 1000, current + 1, maximum);
 }
