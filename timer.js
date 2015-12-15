@@ -17,7 +17,7 @@ function count(current, maximum){
 }
 
 window.onload = function(){
-    document.getElementById('start').click = function(){
+    document.getElementById('start').addEventListener('click', function(){
         count(0, 60);
-    };
+    });
 };
