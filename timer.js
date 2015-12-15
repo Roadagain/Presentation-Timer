@@ -22,8 +22,17 @@ function count(current, maximum){
     }
 }
 
+function resetTimer(){
+    var timer = document.getElementById('timer');
+    timer.innerText = '00:00';
+    timer.style.color = 'lime';
+}
+
 window.onload = function(){
     document.getElementById('start').addEventListener('click', function(){
         count(0, 60);
     });
+    document.getElementById('reset').addEventListener('click', function(){
+        resetTimer();
+    })
 };
