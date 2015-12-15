@@ -11,3 +11,7 @@ p#timer {
     margin: 0;
     padding: 0;
 }
+
+input {
+    width: 3em;
+}
