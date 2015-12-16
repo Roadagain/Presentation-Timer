@@ -10,11 +10,11 @@ function count(current, maximum){
         return;
     }
 
-    var timer = document.getElementById('timer');
+    var timer = $('#timer');
     timer.innerText = formatTime(current);
 
     var timeoutId = window.setTimeout(count, 1000, current + 1, maximum);
-    document.getElementById('stop').addEventListener('click', function(){
+    $('#stop').addEventListener('click', function(){
         window.clearTimeout(timeoutId);
     });
     if (current === maximum){
@@ -23,19 +23,19 @@ function count(current, maximum){
 }
 
 function resetTimer(){
-    var timer = document.getElementById('timer');
+    var timer = $('#timer');
     timer.innerText = '00:00';
     timer.style.color = 'lime';
 }
 
 $(function(){
-    document.getElementById('start').addEventListener('click', function(){
+    $('#start').addEventListener('click', function(){
         resetTimer();
-        var minute = Math.floor(document.getElementById('minute').value);
-        var second = Math.floor(document.getElementById('second').value);
+        var minute = Math.floor($('#minute').value);
+        var second = Math.floor($('#second').value);
         count(0, minute * 60 + second);
     });
-    document.getElementById('reset').addEventListener('click', function(){
+    $('#reset').addEventListener('click', function(){
         resetTimer();
     })
 });
