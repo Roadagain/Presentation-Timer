@@ -31,8 +31,8 @@ function resetTimer(){
 $(function(){
     $('#start').click(function(){
         resetTimer();
-        var minute = Math.floor($('#minute').value);
-        var second = Math.floor($('#second').value);
+        var minute = Math.floor($('#minute').val());
+        var second = Math.floor($('#second').val());
         count(0, minute * 60 + second);
     });
     $('#reset').click(function(){
