@@ -31,7 +31,9 @@ function resetTimer(){
 window.onload = function(){
     document.getElementById('start').addEventListener('click', function(){
         resetTimer();
-        count(0, 60);
+        var minute = Math.floor(document.getElementById('minute').value);
+        var second = Math.floor(document.getElementById('second').value);
+        count(0, minute * 60 + second);
     });
     document.getElementById('reset').addEventListener('click', function(){
         resetTimer();
