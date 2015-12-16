@@ -19,6 +19,7 @@ function count(current, maximum){
     });
     if (current === maximum){
         timer.css('color', 'red');
+        document.getElementById('finished').play();
     }
 }
 
