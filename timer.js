@@ -11,7 +11,7 @@ function count(current, maximum){
     }
 
     var timer = $('#timer');
-    timer.innerText = formatTime(current);
+    timer.text(formatTime(current));
 
     var timeoutId = window.setTimeout(count, 1000, current + 1, maximum);
     $('#stop').click('click', function(){
@@ -24,7 +24,7 @@ function count(current, maximum){
 
 function resetTimer(){
     var timer = $('#timer');
-    timer.innerText = '00:00';
+    timer.text('00:00');
     timer.css('color', 'lime');
 }
 
