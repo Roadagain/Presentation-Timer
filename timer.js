@@ -28,7 +28,7 @@ function resetTimer(){
     timer.style.color = 'lime';
 }
 
-window.onload = function(){
+$(function(){
     document.getElementById('start').addEventListener('click', function(){
         resetTimer();
         var minute = Math.floor(document.getElementById('minute').value);
@@ -38,4 +38,4 @@ window.onload = function(){
     document.getElementById('reset').addEventListener('click', function(){
         resetTimer();
     })
-};
+});
