@@ -18,14 +18,14 @@ function count(current, maximum){
         window.clearTimeout(timeoutId);
     });
     if (current === maximum){
-        timer.style.color = 'red';
+        timer.css('color', 'red');
     }
 }
 
 function resetTimer(){
     var timer = $('#timer');
     timer.innerText = '00:00';
-    timer.style.color = 'lime';
+    timer.css('color', 'lime');
 }
 
 $(function(){
