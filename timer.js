@@ -14,7 +14,7 @@ function count(current, maximum){
     timer.innerText = formatTime(current);
 
     var timeoutId = window.setTimeout(count, 1000, current + 1, maximum);
-    $('#stop').addEventListener('click', function(){
+    $('#stop').click('click', function(){
         window.clearTimeout(timeoutId);
     });
     if (current === maximum){
@@ -29,13 +29,13 @@ function resetTimer(){
 }
 
 $(function(){
-    $('#start').addEventListener('click', function(){
+    $('#start').click(function(){
         resetTimer();
         var minute = Math.floor($('#minute').value);
         var second = Math.floor($('#second').value);
         count(0, minute * 60 + second);
     });
-    $('#reset').addEventListener('click', function(){
+    $('#reset').click(function(){
         resetTimer();
     })
 });
