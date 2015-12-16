@@ -10,32 +10,32 @@ function count(current, maximum){
         return;
     }
 
-    var timer = document.getElementById('timer');
-    timer.innerText = formatTime(current);
+    var timer = $('#timer');
+    timer.text(formatTime(current));
 
     var timeoutId = window.setTimeout(count, 1000, current + 1, maximum);
-    document.getElementById('stop').addEventListener('click', function(){
+    $('#stop').click('click', function(){
         window.clearTimeout(timeoutId);
     });
     if (current === maximum){
-        timer.style.color = 'red';
+        timer.css('color', 'red');
     }
 }
 
 function resetTimer(){
-    var timer = document.getElementById('timer');
-    timer.innerText = '00:00';
-    timer.style.color = 'lime';
+    var timer = $('#timer');
+    timer.text('00:00');
+    timer.css('color', 'lime');
 }
 
-window.onload = function(){
-    document.getElementById('start').addEventListener('click', function(){
+$(function(){
+    $('#start').click(function(){
         resetTimer();
-        var minute = Math.floor(document.getElementById('minute').value);
-        var second = Math.floor(document.getElementById('second').value);
+        var minute = Math.floor($('#minute').val());
+        var second = Math.floor($('#second').val());
         count(0, minute * 60 + second);
     });
-    document.getElementById('reset').addEventListener('click', function(){
+    $('#reset').click(function(){
         resetTimer();
     })
-};
+});
