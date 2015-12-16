@@ -10,6 +10,7 @@ p#timer {
     color: lime;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 input {
