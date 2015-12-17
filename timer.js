@@ -21,6 +21,9 @@ function count(current, maximum){
         timer.css('color', 'red');
         document.getElementById('finished').play();
     }
+    if (current === maximum - 60){
+        document.getElementById('finished').play();
+    }
 }
 
 function resetTimer(){
