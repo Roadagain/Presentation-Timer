@@ -5,6 +5,12 @@ function formatTime(num){
     return minute.substr(-2) + ':' + second.substr(-2);
 }
 
+function resetTimer(){
+    var timer = $('#timer');
+    timer.text('00:00');
+    timer.css('color', 'lime');
+}
+
 function count(current, maximum){
     var timer = $('#timer');
     timer.text(formatTime(current));
@@ -13,6 +19,10 @@ function count(current, maximum){
     $('#stop').click('click', function(){
         window.clearTimeout(timeoutId);
     });
+    $('#reset').click(function(){
+        window.clearTimeout(timeoutId);
+        resetTimer();
+    })
     if (current === maximum){
         timer.css('color', 'red');
         document.getElementById('finished').play();
@@ -22,12 +32,6 @@ function count(current, maximum){
     }
 }
 
-function resetTimer(){
-    var timer = $('#timer');
-    timer.text('00:00');
-    timer.css('color', 'lime');
-}
-
 $(function(){
     $('#start').click(function(){
         resetTimer();
@@ -35,7 +39,4 @@ $(function(){
         var second = Math.floor($('#second').val());
         count(0, minute * 60 + second);
     });
-    $('#reset').click(function(){
-        resetTimer();
-    })
 });
