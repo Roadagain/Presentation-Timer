@@ -5,6 +5,12 @@ function formatTime(num){
     return minute.substr(-2) + ':' + second.substr(-2);
 }
 
+function resetTimer(){
+    var timer = $('#timer');
+    timer.text('00:00');
+    timer.css('color', 'lime');
+}
+
 function count(current, maximum){
     var timer = $('#timer');
     timer.text(formatTime(current));
@@ -20,12 +26,6 @@ function count(current, maximum){
     if (current === maximum){
         timer.css('color', 'red');
     }
-}
-
-function resetTimer(){
-    var timer = $('#timer');
-    timer.text('00:00');
-    timer.css('color', 'lime');
 }
 
 $(function(){
