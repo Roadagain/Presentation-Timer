@@ -6,10 +6,6 @@ function formatTime(num){
 }
 
 function count(current, maximum){
-    if (current > maximum){
-        return;
-    }
-
     var timer = $('#timer');
     timer.text(formatTime(current));
 
