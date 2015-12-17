@@ -13,6 +13,10 @@ function count(current, maximum){
     $('#stop').click('click', function(){
         window.clearTimeout(timeoutId);
     });
+    $('#reset').click(function(){
+        window.clearTimeout(timeoutId);
+        resetTimer();
+    })
     if (current === maximum){
         timer.css('color', 'red');
     }
@@ -31,7 +35,4 @@ $(function(){
         var second = Math.floor($('#second').val());
         count(0, minute * 60 + second);
     });
-    $('#reset').click(function(){
-        resetTimer();
-    })
 });
