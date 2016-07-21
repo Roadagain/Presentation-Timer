@@ -32,7 +32,14 @@ function count(current, maximum){
     }
 }
 
+function extendFontSize(){
+    var height = $(window).height();
+    var width = $(window).width();
+    $('#timer').css('font-size', width / 3 | 0 + 'px');
+}
+
 $(function(){
+    extendFontSize();
     $('#start').click(function(){
         resetTimer();
         var minute = Math.floor($('#minute').val());
