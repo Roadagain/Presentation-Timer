@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 p#timer {
-    color: lime;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: monospace;
+  color: lime;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: monospace;
 }
 
 input {
-    width: 3em;
-    text-align: right;
+  width: 3em;
+  text-align: right;
 }
