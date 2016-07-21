@@ -6,11 +6,11 @@ body {
 }
 
 p#timer {
-    font-size: 600px;
     color: lime;
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: monospace;
 }
 
 input {
