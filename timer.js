@@ -40,6 +40,7 @@ function extendFontSize(){
 
 $(function(){
     extendFontSize();
+    $(window).resize(extendFontSize);
     $('#start').click(function(){
         resetTimer();
         var minute = Math.floor($('#minute').val());
