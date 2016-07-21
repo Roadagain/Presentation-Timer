@@ -35,7 +35,7 @@ function count(current, maximum){
 function extendFontSize(){
     var height = $(window).height();
     var width = $(window).width();
-    $('#timer').css('font-size', width / 3 | 0 + 'px');
+    $('#timer').css('font-size', (Math.min(width / 3 | 0, height)) + 'px');
 }
 
 $(function(){
